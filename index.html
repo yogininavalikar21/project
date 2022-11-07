@@ -165,46 +165,77 @@ margin-left:60px;
 
 
 </div>
-<div style="height:75%;width:100%;border:1px;background-image: url('images/enjoye.png');">
-<br><br><br>
-<div style="height:80%;width:40%;border:3px solid white;background-color:black; float:center; margin-left:450px;color:white;">
-            <marquee><h1 align=center>Enjoy Our Food</h1></marquee>
 
-<hr color=white>
+<div style="height:10%;width:100%;border:1px;">
+<br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="images/gallery1.png" style="width:100%;">
+  <div class="text">Taj Mahal</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="images/gallery2.png" style="width:100%;">
+  <div class="text">Rajasthan</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="images/gallery3.png" style="width:100%;">
+  <div class="text">Khajjiar Valley</div>
+</div>
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <center><img src="images/gallery4.png" style="width:70%;"></center>
+  <div class="text">Lal Fort</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+ <center> <img src="images/gallery5.png" style="width:70%;"></center>
+  <div class="text">Ujjain</div>
+</div>
+
+</div>
+</div>
 <br>
-<font size=5><center>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quidem sit nostrum pariatur perferendis soluta saepe nam eveniet velit exercitationem iusto, molestias sapiente laborum? Hic, eaque. Voluptatum sit incidunt ipsa.</p>
-</center></font>        
-</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+<span class="dot"></span> 
+<span class="dot"></span> 
 
 </div>
 
+<script>
+var slideIndex = 0;
+showSlides();
 
-<div style="height:100%;width:100%;border:1px;background-color:black;">
-<br>
-<table align=center>
-<tr>
-<td><img src="images/menu1.png" width=300px height=300px></td>
-<td>ghj</td>
-<td><img src="images/menu2.png" width=300px height=300px></td>
-<td>ghj</td>
-<td><img src="images/menu3.png" width=300px height=300px></td>
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 
-</tr>
-<tr></tr><tr></tr><tr></tr>
-<tr>
-<td><img src="images/gallery1.png" width=300px height=300px></td>
-<td>ghj</td>
-<td><img src="images/gallery2.png" width=300px height=300px></td>
-<td>ghj</td>
-<td><img src="images/gallery3.png" width=300px height=300px></td>
-
-</tr>
-
-</table>
 </div>
-
-
 </div>
 </body>
 </html>
